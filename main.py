@@ -1,4 +1,4 @@
-"""Times of playlist in youtube
+"""Total time of all YouTube videos in a playlist.
 """
 
 from typing import List
