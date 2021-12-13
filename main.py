@@ -14,7 +14,7 @@ class PlaylistTimes:
         option = webdriver.ChromeOptions()
         option.add_argument('--user-data-dir=./YouTube')
         self.youtube = webdriver.Chrome(
-            executable_path="./chromedriver", chrome_options=option)
+            executable_path="./chromedriver", options=option)
         self.times = []
         self.minute_times = []
         self.length = 0
@@ -115,6 +115,6 @@ class PlaylistTimes:
 
 youtube = PlaylistTimes()
 input_url = input('Playlist Link: ')
-while input_url != 'done':
+while input_url:
     youtube.playlist_times(input_url)
     input_url = input('Playlist Link: ')
