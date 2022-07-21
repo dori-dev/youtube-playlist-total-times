@@ -15,6 +15,7 @@ class PlaylistTimes:
         option.add_argument('--user-data-dir=./YouTube')
         self.youtube = webdriver.Chrome(
             executable_path="./chromedriver", options=option)
+        self.youtube.maximize_window()
         self.times = []
         self.minute_times = []
         self.length = 0
